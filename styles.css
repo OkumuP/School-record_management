@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #records-container {
+    margin: 20px;
+  }
+  
+  .record {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #record-form {
+    margin: 20px;
+  }
+  
+  #record-form input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  #record-form button {
+    margin-top: 10px;
+  }
+  
