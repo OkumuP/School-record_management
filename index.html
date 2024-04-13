@@ -7,16 +7,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>School Record Management System</h1>
-  <div id="records-container">
-    <!-- Records will be dynamically added here -->
-  </div>
-  <button id="add-record-btn">Add Record</button>
-  <div id="record-form" style="display: none;">
-    <input type="text" id="name-input" placeholder="Student Name">
-    <input type="text" id="grade-input" placeholder="Grade">
-    <button id="save-record-btn">Save</button>
-    <button id="cancel-record-btn">Cancel</button>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="School Logo"></a>
+    </div>
+    <button class="toggle-menu">&#9776;</button>
+    <ul class="navbar-right" id="navbar-right">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Records</a>
+        <div class="dropdown-content">
+          <a href="#add-student">Students</a>
+          <a href="#">Teachers</a>
+          <a href="#">Support Staff</a>
+          <a href="#">Administration</a>
+        </div>
+      </li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container" id="container">
+    <!-- Add Student Section -->
+    <section id="add-student">
+      <h2>Add Student Details</h2>
+      <form id="student-form">
+        <input type="text" placeholder="Name">
+        <input type="number" placeholder="Age">
+        <input type="date" placeholder="Date of Admission">
+        <input type="text" placeholder="Class">
+        <input type="text" placeholder="Parent's Name">
+        <input type="text" placeholder="Parent's Contact">
+        <button type="submit">Add Student</button>
+      </form>
+    </section>
   </div>
 
   <script src="script.js"></script>

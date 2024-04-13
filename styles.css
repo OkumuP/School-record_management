@@ -1,31 +1,219 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Grey background color */
   }
   
-  h1 {
+  nav {
+    background-color: #152238;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    float: left;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
+  }
+  
+  .toggle-menu {
+    display: none; /* Hide toggle menu by default */
+  }
+  
+  .navbar-right {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .navbar-right li {
+    float: left;
+    margin-left: 20px;
+  }
+  
+  .navbar-right li a {
+    display: block;
+    color: white;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
   
-  #records-container {
-    margin: 20px;
+  .navbar-right li a:hover {
+    background-color: #0d1621;
   }
   
-  .record {
-    border: 1px solid #ccc;
-    padding: 10px;
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #add-student {
+    margin-top: 20px;
+  }
+  
+  #add-student h2 {
     margin-bottom: 10px;
   }
   
-  #record-form {
-    margin: 20px;
-  }
-  
-  #record-form input {
+  #student-form input {
+    display: block;
     margin-bottom: 10px;
     width: 100%;
+    padding: 8px;
   }
   
-  #record-form button {
-    margin-top: 10px;
+  #student-form button {
+    padding: 10px;
+    background-color: #152238;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #student-form button:hover {
+    background-color: #0d1621;
+  }
+  
+  /* Media Query for Toggle Menu */
+  @media screen and (max-width: 768px) {
+    .toggle-menu {
+      display: block;
+      float: right;
+      margin-right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  
+    .navbar-right {
+      display: none;
+      float: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navbar-right li {
+      float: none;
+      text-align: center;
+    }
+  
+    .navbar-right li a {
+      padding: 10px;
+    }
+  
+    .dropdown-content {
+      position: static;
+      display: none;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+  
+    .container {
+      padding-top: 60px; /* Add space for fixed navbar */
+    }
+  
+    .navbar-right.show {
+      display: block;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background-color: #152238;
+      z-index: 1000;
+    }
+  
+    .navbar-right.show li {
+      float: none;
+    }
+  
+    .navbar-right.show li a {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      color: white;
+    }
+  }
+/* Media Query for Toggle Menu */
+@media screen and (max-width: 768px) {
+    .toggle-menu {
+      display: block;
+      float: right;
+      margin-right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  
+    .navbar-right {
+      display: none;
+      float: none;
+      margin: 0;
+      padding: 0;
+      position: relative; /* Add position relative */
+    }
+  
+    .navbar-right.show {
+      display: block;
+      position: absolute; /* Change to absolute */
+      top: 100%; /* Position below toggle menu button */
+      right: 0;
+      width: 100%;
+      background-color: #152238;
+      z-index: 1000;
+    }
+  
+    .navbar-right.show li {
+      float: none;
+      text-align: center;
+      border-bottom: 1px solid #ddd; /* Add border between items */
+    }
+  
+    .navbar-right.show li:last-child {
+      border-bottom: none; /* Remove border for last item */
+    }
+  
+    .navbar-right.show li a {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      color: white;
+    }
   }
   

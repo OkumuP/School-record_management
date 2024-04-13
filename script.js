@@ -39,4 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
       clearForm();
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleMenuBtn = document.querySelector('.toggle-menu');
+    const navbarRight = document.querySelector('.navbar-right');
   
+    toggleMenuBtn.addEventListener('click', function() {
+      navbarRight.classList.toggle('show');
+    });
+  });
+   
